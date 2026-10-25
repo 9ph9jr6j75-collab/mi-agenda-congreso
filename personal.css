@@ -44,7 +44,7 @@ html, body { background: #0b2647; }
 .chip { background: #fff; color: #3e6080; border-color: #fff; }
 .chip:hover { background: #e7f1fc; border-color: #d9ecff; }
 .chip.active { background: #d9ecff; border-color: #a4cef5; color: #174f87; }
-.chip[data-topic="glp1"].active, .chip[data-topic="GLP-1"].active { color: #8c3c20; background: #ffe8dc; border-color: #efb9a5; }
+
 .filter-row select { color: #345572; background: #fff; border-color: #fff; }
 .filter-row select:focus { border-color: #a7d4fc; box-shadow: 0 0 0 2px #a7d4fc26; }
 .filter-row button { color: #dcecff; }

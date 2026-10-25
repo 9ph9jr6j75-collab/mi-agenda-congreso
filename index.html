@@ -12,8 +12,8 @@
   <link rel="manifest" href="manifest.webmanifest">
   <link rel="icon" type="image/svg+xml" href="icon.svg">
   <link rel="apple-touch-icon" href="icon-192.png">
-  <link rel="stylesheet" href="styles.css?v=6">
-  <link rel="stylesheet" href="personal.css?v=6">
+  <link rel="stylesheet" href="styles.css?v=8">
+  <link rel="stylesheet" href="personal.css?v=8">
   <title>Mi agenda del congreso | Congreso Médico Nacional 2026</title>
 </head>
 <body>
@@ -33,7 +33,6 @@
       <section id="agenda-controls" aria-label="Buscar y filtrar actividades">
         <div class="toolbar"><div class="search-wrap"><span data-icon="search" aria-hidden="true"></span><input id="search" type="search" autocomplete="off" placeholder="Tema, charla o expositor" aria-label="Buscar en todo el congreso"><button id="clear-search" class="icon-btn" aria-label="Borrar búsqueda" hidden data-icon="close"></button></div></div>
         <div class="day-strip" id="days" aria-label="Día del congreso"></div>
-        <div class="topic-strip" id="topics" aria-label="Filtrar por tema"></div>
         <div class="filter-row">
           <select id="room-filter" aria-label="Filtrar por salón"><option value="">Todos los salones</option></select>
           <select id="period-filter" aria-label="Filtrar por jornada"><option value="">Todo el día</option><option value="am">Mañana</option><option value="pm">Tarde</option></select>
@@ -43,7 +42,6 @@
       </section>
       <section id="content-view" aria-label="Actividades del congreso">
         <div class="section-head"><div><h2 id="view-title">Lunes 26 de octubre</h2><p class="subtle" id="view-subtitle"></p></div><span id="result-count" class="badge" aria-live="polite"></span></div>
-        <div id="context-note" class="notice" hidden></div>
         <div id="favorite-summary" class="favorite-summary" hidden></div>
         <div id="list" class="agenda-list"><div class="empty-state">Cargando la agenda…</div></div>
       </section>
@@ -52,9 +50,9 @@
         <article id="creator-profile" class="info-card owner-notice creator-profile"><div class="creator-initials" aria-hidden="true">LS</div><div><p class="eyebrow">UNA INICIATIVA INDEPENDIENTE</p><h3>Dr. Luis Mauricio Solano Corella</h3><p>Médico</p><p>Esta guía es una iniciativa del Dr. Solano Corella para facilitar la consulta del programa académico desde el celular y ayudar a cada congresista a organizar su asistencia.</p><p class="subtle">La información académica proviene del programa publicado por el Colegio de Médicos y Cirujanos de Costa Rica.</p></div></article>
         <div class="more-grid">
           <a class="info-card" href="programa-cmn-2026.pdf" target="_blank" rel="noopener"><span data-icon="file"></span><h3>Programa original</h3><p>El PDF completo de 103 páginas.</p><span class="source-link">Abrir programa ↗</span></a>
-          <a class="info-card" href="guia-cmn-2026.pdf" target="_blank" rel="noopener"><span data-icon="file"></span><h3>Guía breve</h3><p>Seis páginas con el mapa diario y el cuadro de GLP-1.</p><span class="source-link">Abrir guía ↗</span></a>
+          <a class="info-card" href="guia-cmn-2026.pdf?v=8" target="_blank" rel="noopener"><span data-icon="file"></span><h3>Guía breve</h3><p>Cómo usar la app y consultar los bloques de los cinco días.</p><span class="source-link">Abrir guía ↗</span></a>
           <article class="info-card"><span data-icon="phone"></span><h3>En la pantalla de inicio</h3><p>En iPhone, abrí este enlace en Safari. Tocá Compartir y elegí Agregar a la pantalla de inicio.</p><p class="subtle">En Android, usá Instalar app o Agregar a pantalla principal desde el menú del navegador.</p><button id="install-button" class="secondary-btn" hidden>Instalar app</button></article>
-          <article class="info-card"><span data-icon="star"></span><h3>Tu programa personal</h3><p>Marcá la estrella de cada actividad. Tus favoritos se guardan en este dispositivo.</p><p class="subtle">En Mi agenda podés ver los cruces de horario y descargar las actividades para tu calendario.</p><button id="go-favorites" class="secondary-btn">Ver mi agenda</button></article>
+          <article class="info-card"><span data-icon="star"></span><h3>Tu programa personal</h3><p>Marcá la estrella de cada actividad. Tus favoritos se guardan solo en tu navegador y no se comparten con otras personas.</p><p class="subtle">En Mi agenda podés ver los cruces de horario y descargar las actividades para tu calendario.</p><button id="go-favorites" class="secondary-btn">Ver mi agenda</button></article>
         </div>
         <article class="info-card"><h3>Sobre los horarios</h3><p>La fuente es el programa académico del CMN 2026, publicado el 24 de octubre. Las actividades con horario de bloque se identifican en su detalle. Los cambios posteriores no se actualizan automáticamente.</p><p id="offline-info" class="subtle">Podés consultar el programa original desde el detalle de cada actividad.</p></article>
       </section>
@@ -63,7 +61,7 @@
   </div>
   <nav class="bottom-nav" aria-label="Navegación principal">
     <button class="nav-btn active" data-view="agenda" aria-current="page"><span data-icon="calendar"></span><span>Agenda</span></button>
-    <button class="nav-btn" data-view="topics"><span data-icon="molecule"></span><span>Temas</span></button>
+    <button class="nav-btn" data-view="topics"><span data-icon="topics"></span><span>Temas</span></button>
     <button class="nav-btn" data-view="favorites"><span data-icon="star"></span><span>Mi agenda <span id="favorite-count"></span></span></button>
     <button class="nav-btn" data-view="more"><span data-icon="more"></span><span>Más</span></button>
   </nav>
@@ -82,6 +80,6 @@
     </section>
   </div>
   <div id="toast" class="toast" role="status" hidden></div>
-  <script src="app.js?v=6" defer></script>
+  <script src="app.js?v=8" defer></script>
 </body>
 </html>
