@@ -1,6 +1,6 @@
 # Mi agenda del congreso
 
-Guía independiente del Congreso Médico Nacional 2026. Incluye 506 actividades y un catálogo de 102 bloques. La guía con robot busca en todo el programa sin cuentas externas.
+Guía independiente del Congreso Médico Nacional 2026. Incluye 504 actividades y un catálogo de 102 bloques. La guía con robot busca en todo el programa sin cuentas externas.
 Elaborada por el Dr. Luis Mauricio Solano Corella.
 
 ## Publicación
@@ -13,4 +13,4 @@ Todas las rutas son relativas. Se puede alojar en la raíz de un dominio o en la
 
 Los favoritos se guardan en el navegador de cada visitante. No se envían a un servidor ni se comparten entre usuarios.
 
-La fuente académica es el programa del 24 de octubre de 2026. Los cambios posteriores deben incorporarse a agenda.json.
+La fuente académica es la versión actualizada del programa incorporada el 25 de octubre de 2026. Los cambios posteriores deben incorporarse a agenda.json.
