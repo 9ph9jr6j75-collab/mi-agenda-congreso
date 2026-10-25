@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="es-CR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#0b2647">
+  <meta name="description" content="Guía independiente del Congreso Médico Nacional 2026 para buscar charlas y organizar tu agenda.">
+  <meta name="author" content="Dr. Luis Mauricio Solano Corella">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-title" content="Mi agenda CMN">
+  <meta name="apple-mobile-web-app-status-bar-style" content="default">
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="icon" type="image/svg+xml" href="icon.svg">
+  <link rel="apple-touch-icon" href="icon-192.png">
+  <link rel="stylesheet" href="styles.css?v=6">
+  <link rel="stylesheet" href="personal.css?v=6">
+  <title>Mi agenda del congreso | Congreso Médico Nacional 2026</title>
+</head>
+<body>
+  <div class="app-shell">
+    <header class="topbar">
+      <a class="brand" href="./" aria-label="Mi agenda del congreso, inicio"><img src="icon.svg" width="42" height="42" alt=""><span class="brand-name">Mi agenda del congreso<small>Guía independiente · CMN 2026</small></span></a>
+      <button class="icon-btn" id="help-button" aria-label="Información de la app" data-icon="info"></button>
+    </header>
+    <main>
+      <section class="hero">
+        <p class="eyebrow">GUÍA INDEPENDIENTE</p>
+        <h1 class="hero-title">Mi agenda<br>del congreso</h1>
+        <p class="hero-subtitle">Congreso Médico Nacional 2026</p>
+        <div class="hero-meta"><span>26 al 30 de octubre</span><span>Real InterContinental</span></div>
+        <div class="hero-credit"><span>Una iniciativa de</span><button type="button" data-creator>Dr. Luis Mauricio Solano Corella</button></div>
+      </section>
+      <section id="agenda-controls" aria-label="Buscar y filtrar actividades">
+        <div class="toolbar"><div class="search-wrap"><span data-icon="search" aria-hidden="true"></span><input id="search" type="search" autocomplete="off" placeholder="Tema, charla o expositor" aria-label="Buscar en todo el congreso"><button id="clear-search" class="icon-btn" aria-label="Borrar búsqueda" hidden data-icon="close"></button></div></div>
+        <div class="day-strip" id="days" aria-label="Día del congreso"></div>
+        <div class="topic-strip" id="topics" aria-label="Filtrar por tema"></div>
+        <div class="filter-row">
+          <select id="room-filter" aria-label="Filtrar por salón"><option value="">Todos los salones</option></select>
+          <select id="period-filter" aria-label="Filtrar por jornada"><option value="">Todo el día</option><option value="am">Mañana</option><option value="pm">Tarde</option></select>
+          <select id="kind-filter" aria-label="Filtrar por tipo"><option value="">Todas las actividades</option><option value="taller">Talleres</option><option value="póster">Pósters</option><option value="plenaria">Plenarias</option></select>
+          <button id="reset-filters" class="chip" hidden>Limpiar filtros</button>
+        </div>
+      </section>
+      <section id="content-view" aria-label="Actividades del congreso">
+        <div class="section-head"><div><h2 id="view-title">Lunes 26 de octubre</h2><p class="subtle" id="view-subtitle"></p></div><span id="result-count" class="badge" aria-live="polite"></span></div>
+        <div id="context-note" class="notice" hidden></div>
+        <div id="favorite-summary" class="favorite-summary" hidden></div>
+        <div id="list" class="agenda-list"><div class="empty-state">Cargando la agenda…</div></div>
+      </section>
+      <section id="more-view" hidden aria-labelledby="more-title">
+        <div class="section-head"><h2 id="more-title">Todo a mano</h2></div>
+        <article id="creator-profile" class="info-card owner-notice creator-profile"><div class="creator-initials" aria-hidden="true">LS</div><div><p class="eyebrow">UNA INICIATIVA INDEPENDIENTE</p><h3>Dr. Luis Mauricio Solano Corella</h3><p>Médico</p><p>Esta guía es una iniciativa del Dr. Solano Corella para facilitar la consulta del programa académico desde el celular y ayudar a cada congresista a organizar su asistencia.</p><p class="subtle">La información académica proviene del programa publicado por el Colegio de Médicos y Cirujanos de Costa Rica.</p></div></article>
+        <div class="more-grid">
+          <a class="info-card" href="programa-cmn-2026.pdf" target="_blank" rel="noopener"><span data-icon="file"></span><h3>Programa original</h3><p>El PDF completo de 103 páginas.</p><span class="source-link">Abrir programa ↗</span></a>
+          <a class="info-card" href="guia-cmn-2026.pdf" target="_blank" rel="noopener"><span data-icon="file"></span><h3>Guía breve</h3><p>Seis páginas con el mapa diario y el cuadro de GLP-1.</p><span class="source-link">Abrir guía ↗</span></a>
+          <article class="info-card"><span data-icon="phone"></span><h3>En la pantalla de inicio</h3><p>En iPhone, abrí este enlace en Safari. Tocá Compartir y elegí Agregar a la pantalla de inicio.</p><p class="subtle">En Android, usá Instalar app o Agregar a pantalla principal desde el menú del navegador.</p><button id="install-button" class="secondary-btn" hidden>Instalar app</button></article>
+          <article class="info-card"><span data-icon="star"></span><h3>Tu programa personal</h3><p>Marcá la estrella de cada actividad. Tus favoritos se guardan en este dispositivo.</p><p class="subtle">En Mi agenda podés ver los cruces de horario y descargar las actividades para tu calendario.</p><button id="go-favorites" class="secondary-btn">Ver mi agenda</button></article>
+        </div>
+        <article class="info-card"><h3>Sobre los horarios</h3><p>La fuente es el programa académico del CMN 2026, publicado el 24 de octubre. Las actividades con horario de bloque se identifican en su detalle. Los cambios posteriores no se actualizan automáticamente.</p><p id="offline-info" class="subtle">Podés consultar el programa original desde el detalle de cada actividad.</p></article>
+      </section>
+      <p class="subtle" id="source-footer" style="padding:24px 0 8px">Guía independiente elaborada por el Dr. Luis Mauricio Solano Corella.<br>Fuente: programa académico CMN 2026 · 24 de octubre de 2026.</p>
+    </main>
+  </div>
+  <nav class="bottom-nav" aria-label="Navegación principal">
+    <button class="nav-btn active" data-view="agenda" aria-current="page"><span data-icon="calendar"></span><span>Agenda</span></button>
+    <button class="nav-btn" data-view="topics"><span data-icon="molecule"></span><span>Temas</span></button>
+    <button class="nav-btn" data-view="favorites"><span data-icon="star"></span><span>Mi agenda <span id="favorite-count"></span></span></button>
+    <button class="nav-btn" data-view="more"><span data-icon="more"></span><span>Más</span></button>
+  </nav>
+  <div id="detail-overlay" class="overlay" hidden><section class="sheet" role="dialog" aria-modal="true" aria-labelledby="detail-title" tabindex="-1"><div class="sheet-header"><span class="eyebrow">DETALLE DE LA ACTIVIDAD</span><button id="close-detail" class="icon-btn" aria-label="Cerrar detalle" data-icon="close"></button></div><div id="detail-body" class="sheet-body"></div></section></div>
+  <button id="guide-button" class="guide-fab" aria-label="Abrir guía del congreso" title="Buscar charlas"><img src="robot.svg" width="44" height="44" alt=""></button>
+  <div id="guide-overlay" class="overlay" hidden>
+    <section class="sheet guide-sheet" role="dialog" aria-modal="true" aria-labelledby="guide-title" tabindex="-1">
+      <div class="sheet-header"><span class="eyebrow">GUÍA DEL PROGRAMA</span><button id="close-guide" class="icon-btn" aria-label="Cerrar guía" data-icon="close"></button></div>
+      <div class="sheet-body">
+        <div class="guide-intro"><div class="guide-avatar"><img src="robot.svg" width="72" height="72" alt="Robot guía"></div><div><h2 id="guide-title">Todo el congreso a tu alcance</h2><p>Buscá cualquier tema del programa o el nombre de un expositor.</p></div></div>
+        <form id="guide-form" class="guide-form"><label for="guide-query">¿Qué querés encontrar?</label><input id="guide-query" type="search" placeholder="Ej.: pediatría o nombre del expositor" autocomplete="off" required><button class="primary-btn" type="submit">Buscar en todo el programa</button></form>
+        <div class="guide-quick-actions" aria-label="Accesos de la guía"><button class="secondary-btn" data-guide-action="agenda">Agenda completa</button><button class="secondary-btn" data-guide-action="topics">Explorar temas</button><button class="secondary-btn" data-guide-action="speaker">Buscar expositor</button><button class="secondary-btn" data-guide-action="favorites">Mis favoritos</button></div>
+        <p class="subtle">La guía consulta el programa del congreso. Funciona sin cuenta ni suscripción.</p>
+        <div class="creator-credit"><span>Una iniciativa de</span><button class="creator-link" type="button" data-creator>Dr. Luis Mauricio Solano Corella</button></div>
+      </div>
+    </section>
+  </div>
+  <div id="toast" class="toast" role="status" hidden></div>
+  <script src="app.js?v=6" defer></script>
+</body>
+</html>
