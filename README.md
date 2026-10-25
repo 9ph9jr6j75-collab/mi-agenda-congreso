@@ -14,3 +14,9 @@ Todas las rutas son relativas. Se puede alojar en la raíz de un dominio o en la
 Los favoritos se guardan en el navegador de cada visitante. No se envían a un servidor ni se comparten entre usuarios.
 
 La fuente académica es la versión actualizada del programa incorporada el 25 de octubre de 2026. Los cambios posteriores deben incorporarse a agenda.json.
+
+## Estadísticas de visitas
+
+Google Analytics 4 utiliza el ID público G-TJ04766H0B. El código se carga de forma asíncrona y no impide usar la agenda si Analytics está bloqueado o no hay conexión. La personalización publicitaria y Google Signals están desactivados en la etiqueta. No se añadieron eventos personalizados de búsquedas ni favoritos.
+
+Las estadísticas se consultan en la propiedad correspondiente de Google Analytics. Los usuarios y las sesiones permiten evaluar el tráfico; las vistas pueden incluir cambios de sección según la configuración de medición optimizada de la propiedad.
