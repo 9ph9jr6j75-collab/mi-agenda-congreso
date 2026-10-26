@@ -17,6 +17,8 @@ La fuente académica es la versión actualizada del programa incorporada el 25 d
 
 ## Estadísticas de visitas
 
-Google Analytics 4 utiliza el ID público G-TJ04766H0B. El código se carga de forma asíncrona y no impide usar la agenda si Analytics está bloqueado o no hay conexión. La personalización publicitaria y Google Signals están desactivados en la etiqueta. No se añadieron eventos personalizados de búsquedas ni favoritos.
+Google Analytics 4 utiliza la propiedad independiente `Agenda del congreso CMN 2026`, el flujo web de `https://9ph9jr6j75-collab.github.io/mi-agenda-congreso/` y el ID público `G-ZJJLBCR440`. La configuración de cada app está en `app-config.json`; la medición sólo se inicia si los IDs están completos y la dirección coincide con la de esa app. Al copiar el proyecto para otra app, se deben sustituir esos datos por los de su propia propiedad.
 
-Las estadísticas se consultan en la propiedad correspondiente de Google Analytics. Los usuarios y las sesiones permiten evaluar el tráfico; las vistas pueden incluir cambios de sección según la configuración de medición optimizada de la propiedad.
+La app envía únicamente la vista inicial de página y no añade eventos de búsquedas ni favoritos. La medición mejorada está desactivada en el flujo web. Google Analytics puede generar sus eventos técnicos de sesión y actividad a partir de esa vista. La personalización publicitaria y Google Signals están desactivados en la etiqueta.
+
+El código se carga de forma asíncrona y no impide usar la agenda si Analytics está bloqueado o no hay conexión. Las estadísticas se consultan en la propiedad `Agenda del congreso CMN 2026`, separada de la app de farmacias.

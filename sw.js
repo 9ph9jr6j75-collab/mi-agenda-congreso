@@ -1,6 +1,6 @@
 const CACHE_PREFIX='cmn2026:'+self.registration.scope+':';
-const CACHE=CACHE_PREFIX+'v11';
-const ASSETS=['./','index.html','styles.css?v=10','personal.css?v=10','app.js?v=10','agenda.json?v=10','manifest.webmanifest','icon.svg','robot.svg','icon-192.png','icon-512.png','guia-cmn-2026.pdf?v=10'];
+const CACHE=CACHE_PREFIX+'v12';
+const ASSETS=['./','index.html','analytics.js?v=12','app-config.json?v=12','styles.css?v=10','personal.css?v=10','app.js?v=10','agenda.json?v=10','manifest.webmanifest','icon.svg','robot.svg','icon-192.png','icon-512.png','guia-cmn-2026.pdf?v=10'];
 self.addEventListener('install',event=>{event.waitUntil(caches.open(CACHE).then(cache=>cache.addAll(ASSETS.map(asset=>new Request(asset,{cache:'reload'})))).then(()=>self.skipWaiting()));});
 self.addEventListener('activate',event=>{event.waitUntil(caches.keys().then(keys=>Promise.all(keys.filter(k=>k.startsWith(CACHE_PREFIX)&&k!==CACHE).map(k=>caches.delete(k)))).then(()=>self.clients.claim()));});
 self.addEventListener('fetch',event=>{
